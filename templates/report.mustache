@@ -1,0 +1,38 @@
+<div id="{{containerid}}" class="block_zoola_reports">
+    <div class="block_zoola_reports_controls" style="display: none;" >
+        <div style="display: inline-block;">
+            <button type="button" class="btn block_zoola_reports_showfilters" title="{{#str}} inputcontrols, block_zoola_reports{{/str}}" disabled="disabled">
+                {{#str}} inputcontrols, block_zoola_reports{{/str}}
+            </button>
+            <button type="button" class="btn block_zoola_reports_exportpdf" style="display: none;" disabled="disabled">
+                {{#str}} export, block_zoola_reports, PDF {{/str}}
+            </button>
+            <button type="button" class="btn block_zoola_reports_exportxlsx" style="display: none;" disabled="disabled">
+                {{#str}} export, block_zoola_reports, Excel {{/str}}
+            </button>
+            <button type="button" class="btn block_zoola_reports_email" style="display: none;" disabled="disabled">
+                {{#str}} email, block_zoola_reports {{/str}}
+            </button>
+            <button type="button" class="btn block_zoola_reports_back" style="display: none;">
+                {{#str}} back, core {{/str}}
+            </button>
+        </div>
+        <div class="mdl-right block_zoola_reports_pagingbar" style="display: inline-block; float: right;">
+            <button class="block_zoola_reports_first btn" type="button" title="{{#str}} first {{/str}}" disabled="disabled">&laquo;</button>
+            <button class="block_zoola_reports_previous btn" type="button" title="{{#str}} previous {{/str}}" disabled="disabled">&lt;</button>
+            <span>{{#str}} page {{/str}}</span>
+            <input class="block_zoola_reports_pagecurrent" type="text" size="5">
+            <span class="block_zoola_reports_pagecount"></span>
+            <button class="block_zoola_reports_next btn" type="button" title="{{#str}} next {{/str}}" disabled="disabled">&gt;</button>
+            <button class="block_zoola_reports_last btn" type="button" title="{{#str}} last {{/str}}" disabled="disabled">&raquo;</button>
+        </div>
+    </div>
+    <div class="block_zoola_reports_loading">
+        <span class="loading-icon">{{#pix}} i/loading, core {{/pix}}</span>
+        <br>
+        <span class="message">{{#str}} retrievingdata, block_zoola_reports {{/str}}</span>
+    </div>
+    {{> block_zoola_reports/inputcontrols}}
+    <div class="block_zoola_reports_report">
+    </div>
+</div>

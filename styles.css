@@ -1,0 +1,175 @@
+.block_zoola_reports .userselector select {
+    max-width: none;
+    overflow: auto;
+}
+
+.block_zoola_reports td.existing, .block_zoola_reports td.potential {
+    width: 42%;
+}
+
+.block_zoola_reports td.actions {
+    width: 16%;
+}
+
+.block_zoola_reports input.actionbutton {
+    margin: 0 auto;
+}
+
+.block_zoola_reports #userselector_options {
+    display: none;
+}
+
+.block_zoola_reports_report {
+    margin-bottom: 1em;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.block_zoola_reports_fit {
+    overflow: hidden;
+}
+
+.block_zoola_reports_loading {
+    text-align: center;
+}
+
+.block_zoola_reports_dashboard {
+    height: 800px;
+    margin-bottom: 1em;
+    overflow: auto;
+}
+
+#block-region-content .block_zoola_reports_dashboard {
+    height: 600px;
+}
+
+#block-region-side-pre .block_zoola_reports_dashboard,
+#block-region-side-post .block_zoola_reports_dashboard {
+    height: 400px;
+}
+
+.block_zoola_reports_pagingbar > button.btn {
+    margin: 0;
+}
+
+.block_zoola_reports_pagingbar > input[type="text"] {
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.block_zoola_reports_pagingbar > span {
+    margin: 0;
+}
+
+#block-region-side-pre .block_zoola_reports_controls,
+#block-region-side-post .block_zoola_reports_controls {
+    font-size: 11px;
+}
+
+#block-region-side-pre .block_zoola_reports_controls button.btn,
+#block-region-side-post .block_zoola_reports_controls button.btn {
+    padding: 0;
+    width: 20px;
+}
+
+#block-region-side-pre .block_zoola_reports_controls button.btn.block_zoola_reports_back,
+#block-region-side-post .block_zoola_reports_controls button.btn.block_zoola_reports_back {
+    padding: 0 4px;
+    width: auto;
+}
+
+#block-region-side-pre .block_zoola_reports_controls button.block_zoola_reports_first.btn,
+#block-region-side-post .block_zoola_reports_controls button.block_zoola_reports_first.btn,
+#block-region-content .block_zoola_reports_controls button.block_zoola_reports_first.btn,
+#block-region-side-pre .block_zoola_reports_controls button.block_zoola_reports_last.btn,
+#block-region-side-post .block_zoola_reports_controls button.block_zoola_reports_last.btn,
+#block-region-content .block_zoola_reports_controls button.block_zoola_reports_last.btn {
+    display: none;
+}
+
+#block-region-side-pre .block_zoola_reports_pagingbar > input[type="text"],
+#block-region-side-post .block_zoola_reports_pagingbar > input[type="text"] {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.block_zoola_reports-emailwait {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1200;
+}
+
+.block_zoola_reports-emailwait .loading-icon {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.block_zoola_reports.modal .modal-body {
+    overflow: auto;
+}
+
+.block_zoola_reports.modal {
+    position: fixed;
+    top: 5%;
+    z-index: 4500;
+}
+
+.modal.block_zoola_reports .mform fieldset .fitemtitle {
+    text-align: left;
+    width: 100px;
+}
+
+.modal.block_zoola_reports .mform fieldset .felement,
+.modal.block_zoola_reports .mform fieldset .fdescription {
+    margin-left: 110px;
+}
+
+.modal.block_zoola_reports form.mform {
+    padding: 0;
+}
+
+.block_zoola_reports .visualizejs,
+.block_zoola_reports table.jr_floating_header tbody tr td {
+    line-height: initial;
+}
+
+.block_zoola_reports .visualizejs table,
+.block_zoola_reports .visualizejs .icon,
+.block_zoola_reports .jr-mForm button {
+    margin: initial;
+}
+
+.block_zoola_reports .visualizejs td,
+.block_zoola_reports table.jr_floating_header tbody tr td,
+.block_zoola_reports .dashboardCanvas.jr div.content,
+.block_zoola_reports .dashboardCanvas.jr table.paginationControl td {
+    padding: initial;
+}
+
+.block_zoola_reports button.jr {
+    background-image: none;
+}
+
+.block_zoola_reports input.jr[type="text"] {
+    max-width: inherit;
+}
+
+.block_zoola_reports .dashboardCanvas.jr table.paginationControl td input.current {
+    box-sizing: border-box;
+}
+
+.block_zoola_reports label.jr-mInput-label {
+    font-size: 11px;
+}
+
+div.jr-mSingleselect-dropdown.jr {
+    z-index: 4501;
+}

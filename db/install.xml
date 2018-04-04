@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/zoola_reports/db" VERSION="20170523" COMMENT="XMLDB file for Moodle blocks/zoola_reports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_zoola_reports" COMMENT="Reports configured in this block instance">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="blockinstanceid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Block instance ID"/>
+        <FIELD NAME="uri" TYPE="char" LENGTH="1333" NOTNULL="true" SEQUENCE="false" COMMENT="Report URI"/>
+        <FIELD NAME="type" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="Resource type: reportUnit or reportOptions"/>
+        <FIELD NAME="label" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Report label"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="blockinstance" TYPE="foreign" FIELDS="blockinstanceid" REFTABLE="block_instances" REFFIELDS="id" COMMENT="Foreign key to the block instance"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_zoola_reports_user" COMMENT="Users that can access this block instance">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="blockinstanceid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Block instance ID"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="User ID"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="blockinstance" TYPE="foreign" FIELDS="blockinstanceid" REFTABLE="block_instances" REFFIELDS="id" COMMENT="Foreign key to the block instance"/>
+        <KEY NAME="user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="Foreign key to the user"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="blockinstanceuser" UNIQUE="true" FIELDS="blockinstanceid, userid" COMMENT="blockinstanceid and userid must be unique"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="block_zoola_reports_cohort" COMMENT="Cohorts that can access this block instance">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="blockinstanceid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Block instance ID"/>
+        <FIELD NAME="cohortid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Cohort ID"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="blockinstance" TYPE="foreign" FIELDS="blockinstanceid" REFTABLE="block_instances" REFFIELDS="id" COMMENT="Foreign key to the block instance"/>
+        <KEY NAME="cohort" TYPE="foreign" FIELDS="cohortid" REFTABLE="cohort" REFFIELDS="id" COMMENT="Foreign key to the cohort"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="blockinstancecohort" UNIQUE="true" FIELDS="blockinstanceid, cohortid" COMMENT="blockinstanceid and cohortid must be unique"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
